@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!--Bootstrapのを使うための設定-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- BootstrapのCSS読み込み -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- BootstrapのJS読み込み -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- icon Kit-->
+  <script src="https://kit.fontawesome.com/a5c3d9e9e3.js" crossorigin="anonymous"></script>
+
+  <title>危ないサイトではない</title>
+</head>
+
+<body class="mx-5 mt-3">
+  <header class="text-center">
+    <div class="jumbotron jumbotron">
+      <h1 class="display-4">ここがマイページ</h1>
+      <h2 class="lead">練習用、テスト用のHTML</h2>
+    </div>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="icebreak_activity.html">Activity</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Message</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">MyPage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Test</a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <div class="container">
+      <!--プロフィール-->
+      <div class="row mt-3">
+        <div class="col">
+          <img src="img/IMG_4710.jpg" class="rounded mx-auto d-block border" width="145" height="200" alt="image">
+        </div>
+        <div class="col border-left">
+          <h1>MyName is Yuma</h1><br />
+          <p>
+            Thank you for watching my page.<br />
+            <hr />
+            一年間HTMLを勉強し最近「Bootstrap」というものを<br />
+            知りました。この、仕組みはとても興味深く練習中では<br />
+            ありますが、ここに書き留めておきます。
+          </p>
+        </div>
+      </div>
+      <!--カード-->
+      <div class="row mt-3">
+        <div class="col-md-4 mt-1">
+          <div class="card">
+            <h5 class="card-header">Items</h5>
+            <div class="card-body">
+              <h5 class="card-title">HTML</h5>
+              <p class="card-text">
+                今の時代"HTML"は欠かせない言語です。<br />パソコンからだけでなく、携帯端末からもアクセス出来る素晴らしい言語です。<br />例としてはamazonやBlogなどですかね？</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-1">
+          <div class="card">
+            <h5 class="card-header">Items</h5>
+            <div class="card-body">
+              <h5 class="card-title">Bootstrap4</h5>
+              <p class="card-text">この画面の見た目すべてを担っています。<br />記述はclassで指定する事で、変えることが出来ます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-1">
+          <div class="card">
+            <h5 class="card-header">Items</h5>
+            <div class="card-body">
+              <h5 class="card-title">Font Awesome</h5>
+              <p class="card-text">下の"footer"で、使っています。<br />主にアイコン画像を取得することが出来るAPIの様なものです！</p>
+              <a class="card-link" href="https://fontawesome.com/start">https://fontawesome.com/start</a>
+              <p>※メールアドレスの登録が必要です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--フッター-->
+  <footer class="text-center text-white mt-3" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+        <!-- Github -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/norarun" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+
+</html>

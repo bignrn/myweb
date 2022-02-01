@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>お互いの事をもっと知ろう!</title>
+    <!--Bootstrapのを使うための設定-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--javascript-->
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body class="mx-5 mt-3">
+    <header>
+        <div class="jumbotron jumbotron-fluid mx-2 mt-3">
+            <h1 class="text-center">アイスブレイクタイム</h1>
+            <h1 class="text-center"></h1>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="icebreak_activity.html">Activity</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Message</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="MyProfile.html">MyPage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Test</a>
+            </li>
+        </ul>
+    </header>
+    <main class="row">
+        <div class="col-md-3 mt-1">
+            <div class="float-right border-right border-success">
+                <h2 class="mt-3">Activity<span class="text-secondary">MENU</span></h2>
+                <hr>
+                <h4><a href="icebreak_activity.html" class="nav-item">TOPIC DICE▶</a></h4>
+                <hr>
+                <h4><a href="./activity/YouTube.RPG/part01/index.html" class="nav-item">RPG</a></h4>
+                <hr>
+                <h4><a href="#" class="nav-item">Any time soon...?</a></h4>
+                <hr>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3 class="ml-3 mt-3"><span class="text-primary">TOPIC</span>サイコロ</h3>
+            <p class="ml-5">ルール：サイコロを回して、出た話題について話してもらいます！</p>
+            <div class="col text-center">
+                <button id="btn-dice" class="btn btn-outline-danger btn-light" onclick="saikoro()">サイコロを投げる</button>
+            </div>
+            <div class="text-center">
+                <div id="diceID"></div>
+                <h2 id="p1"></h2>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <h3 class="mt-3">話題リスト</h3>
+            <ul id="list" class="border-left border-danger"></ul>
+        </div>
+    </main>
+</body>
+
+</html>
