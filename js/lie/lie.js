@@ -5,26 +5,23 @@ function submit() {
 
     eroKeyWD(keywd); //json
 
-    // //ローカルテスト↓
+    //ローカルテスト↓
     // const list = new Array("えろ", "ちんこ")
 
-    // var URL = ""
+    // var URL = "https://www.google.com/search?q=" + keywd;
+
+    // //条件で上書きします
     // list.some(element => {
     //     console.log(element + ":" + keywd)
     //     if (element == keywd) {
     //         console.log("ここはエロサイトに繋がります")
     //         URL = "./BBAAAA.html"
     //         return true;
-    //     } else {
-    //         //通常検索
-    //         console.log("普通の検索")
-    //         URL = "https://www.google.com/search?q=" + keywd;
-    //         return true;
     //     }
     // });
 
     // location.href = URL
-    // //ローカルテスト↑
+    //ローカルテスト↑
 }
 
 /**
