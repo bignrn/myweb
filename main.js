@@ -12,7 +12,7 @@ https://lealog.hateblo.jp/entry/2011/12/16/234332
 var flg = true; //ストップする　と　サイコロを振るの変更
 //画像ファイルの名前
 var imgs = ["icon_140540_256", "icon_140550_256", "icon_140570_256", "icon_140580_256", "icon_140590_256",
-            "icon_140600_256", "icon_140610_256", "icon_140620_256", "icon_140630_256", "icon_140640_256"];
+    "icon_140600_256", "icon_140610_256", "icon_140620_256", "icon_140630_256", "icon_140640_256"];
 var fileDirectry = "./img/dices/";  //ディレクトリのURL
 var count;  //サイコロの空振り回数
 
@@ -22,13 +22,13 @@ var count;  //サイコロの空振り回数
  * @returns {HTMLElement}
  */
 var $id =
-    function (id){
-    return document.getElementById(id)
+    function (id) {
+        return document.getElementById(id)
     }
 /**
  * ロード時に実行
  */
-window.addEventListener("load", function (){
+window.addEventListener("load", function () {
     shake();
     createList();
 })
@@ -36,13 +36,13 @@ window.addEventListener("load", function (){
 /**
  * 話題リストを作成
  */
-function createList(){
+function createList() {
     //Topicを入れる
     url = "topic.json"
     $.getJSON(url, (data) => {                                  //jsonを取得する。サーバーを経由していないと実行されない。CRF？が原因。
-        for (var i = 0; i< data.length; i++){
-            var li = document.createElement('li');          //<li>タグを生成する
-            li.textContent = data[i].id + " : " + data[i].title;    //jsonデータのIDごとの取得
+        for (var i = 0; i < data.length; i++) {
+            var li = document.createElement('li');              //<li>タグを生成する
+            li.textContent = data[i].id + " : " + data[i].title;//jsonデータのIDごとの取得
             $id("list").appendChild(li);                        //ここで<div>に挿入
         }
     });
@@ -50,9 +50,9 @@ function createList(){
 /**
  * メインメソッド
  */
-function saikoro(){
+function saikoro() {
     console.log("flg=" + flg)
-    if(flg == true){
+    if (flg == true) {
         //ボタンテキスト変更
         $id("btn-dice").textContent = "ストップする"
         console.log("スタート")
@@ -60,15 +60,15 @@ function saikoro(){
 
         count = 0;
         anime();
-    }else{
+    } else {
         flg = true
     }
 }
 /**
  * サイコロを振るときのアニメーション
  */
-function anime(){
-    if (count > 300 || flg == true){
+function anime() {
+    if (count > 300 || flg == true) {
         count = 0;
         //ボタンテキスト変更
         $id("btn-dice").textContent = "サイコロを投げる"
@@ -82,7 +82,7 @@ function anime(){
 /**
  * サイコロを振る
  */
-function shake(){
+function shake() {
     //サイコロの絵柄 --err:同じ絵柄の時表示されない
     var Index = Math.floor(Math.random() * imgs.length);
 
@@ -95,8 +95,8 @@ function shake(){
         var rand = Math.floor(Math.random() * data.length)
 
         //変数格納
-        var id =  data[rand].id
-        var title =  data[rand].title
+        var id = data[rand].id
+        var title = data[rand].title
 
         //ランダム値からTopic表示
         $id("p1").textContent = "Topic:" + id + " " + title
