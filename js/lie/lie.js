@@ -11,6 +11,7 @@ function submit() {
     // var URL = "https://www.google.com/search?q=" + keywd;
 
     // //条件で上書きします
+    // tips -> listだと何回も実行されて表示がバグる
     // list.some(element => {
     //     console.log(element + ":" + keywd)
     //     if (element == keywd) {
@@ -43,4 +44,6 @@ function eroKeyWD(key) {
             }
         }
     });
+    //何もなかったら
+    location.href = "https://www.google.com/search?q=" + key;
 }
