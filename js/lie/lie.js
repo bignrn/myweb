@@ -3,7 +3,14 @@ function submit() {
     const txbox = document.getElementById("search");
     const keywd = txbox.value;
 
-    eroKeyWD();
+    const list = eroKeyWD(); //json
+    // const list = new Array("えろ", "ちんこ")
+
+    list.forEach(element => {
+        if (element == keywd) {
+            console.log("ここはエロサイトに繋がります")
+        }
+    });
 }
 
 /**
@@ -22,4 +29,6 @@ function eroKeyWD() {
         }
     });
     console.log("list=" + key_list[1]);
+
+    return key_list;
 }
