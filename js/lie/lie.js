@@ -4,14 +4,27 @@ function submit() {
     const keywd = txbox.value;
 
     eroKeyWD(keywd); //json
+
+    // //ローカルテスト↓
     // const list = new Array("えろ", "ちんこ")
 
-    // list.forEach(element => {
+    // var URL = ""
+    // list.some(element => {
+    //     console.log(element + ":" + keywd)
     //     if (element == keywd) {
     //         console.log("ここはエロサイトに繋がります")
-    //         location.href = "./BBAAAA.html"
+    //         URL = "./BBAAAA.html"
+    //         return true;
+    //     } else {
+    //         //通常検索
+    //         console.log("普通の検索")
+    //         URL = "https://www.google.com/search?q=" + keywd;
+    //         return true;
     //     }
     // });
+
+    // location.href = URL
+    // //ローカルテスト↑
 }
 
 /**
@@ -29,6 +42,7 @@ function eroKeyWD(key) {
         for (var i = 0; i < maxIdx; i++) {
             if (key == data[i].key) {
                 console.log("これはエロいですね");
+                location.href = "./BBAAAA.html"
             }
         }
     });
