@@ -17,8 +17,9 @@ function eroKeyWD() {
         const maxIdx = data.length; //マックスレングス
         var key_list = Array(maxIdx)
         for (var i = 0; i < maxIdx; i++) {
-            key_list[i] = data[i].title;   //リスト追加
+            key_list[i] = data[i].key;   //リスト追加
             console.log(data[i].id + " : " + data[i].key);  //jsonデータのIDごとの取得
         }
     });
+    console.log("list=" + key_list[1]);
 }
