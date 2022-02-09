@@ -49,5 +49,7 @@ function eroKeyWD(key) {
         location.href = "https://www.google.com/search?q=" + key;
     } else {
         console.log("未入力")
+        const txbox = document.getElementById("search");
+        txbox.innerText = "検索文字を入れてください。"
     }
 }
