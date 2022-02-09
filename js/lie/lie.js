@@ -32,18 +32,22 @@ function eroKeyWD(key) {
     //Topicを入れる
     url = "json/ero_keywd.json";
 
-    $.getJSON(url, (data) => {                                  //jsonを取得する。サーバーを経由していないと実行されない。CRF？が原因。
+    $.getJSON(url, (data) => {      //jsonを取得する。サーバーを経由していないと実行されない。CRF？が原因。
         const maxIdx = data.length; //マックスレングス
         var key_list = Array(maxIdx)
 
         //検索
         for (var i = 0; i < maxIdx; i++) {
             if (key == data[i].key) {
-                console.log("これはエロいですね");
+                console.log("条件にヒットしました。");
                 location.href = "./BBAAAA.html"
             }
         }
     });
     //何もなかったら
-    location.href = "https://www.google.com/search?q=" + key;
+    if (key === null) {
+        location.href = "https://www.google.com/search?q=" + key;
+    } else {
+        console.log("未入力")
+    }
 }
