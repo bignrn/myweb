@@ -1,57 +1,58 @@
+<!--
+参考URL : https://techacademy.jp/magazine/6270
+公式サイト:https://getbootstrap.jp/docs/5.0/getting-started/introduction/
+git:https://qiita.com/yukiyoshimura/items/7aa4a8f8db493ab97c2b
+-->
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME</title>
     <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!--javascript-->
-    <script type="text/javascript" src="js/lie/lie.js"></script>
-
+    <script src="../js/bootstrap.min.js"></script>
 </head>
 
-<body>
-    <header>
-        <div class="jumbotron jumbotron-fluid mx-2 mt-3">
-            <h1 class="text-center">MY HOME PAGE</h1>
-            <h1 class="text-center"></h1>
-        </div>
-        <ul class="nav nav-tabs m-4 mb-4">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+<body class="bg-lightsteelblue bg-img-main">
+    <!--ヘッダー-->
+    <header class="m-5">
+        <!--メニューリンク-->
+        <ul class=" nav nav-tabs">
+            <li class=" nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="icebreak_activity.html">Activity</a>
+                <a class="nav-link text-success" href="icebreak_activity.html">Activity</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Message</a>
+                <a class="nav-link text-success" href="#">Message</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="MyProfile.html">MyPage</a>
+                <a class="nav-link text-success" href="MyProfile.html">MyPage</a>
             </li>
-        </ul>
-    </header>
-    <main>
-        <div class="text-center mt-5 my-5">
-
-            <h1 class=""> HOME </h1>
-
+            <li class="nav-item">
+                <a class="nav-link text-success" href="search.html">検索</a>
+            </li>
+        </ul><!-- ./nav -->
+    </header><!-- ./header -->
+    <!--メイン-->
+    <main class="m-5 p-3 text-white">
+        <div class="text-center display-1">
+            <h1 class="mt-5">WELCOME TO <span class="text-dark">HERE</span></h1>
         </div>
     </main>
-    <footer class="text-center text-white mt-3 fixed-bottom" style="background-color: #f1f1f1;">
+    <!--フッター-->
+    <footer class="text-center text-white mt-1 fixed-bottom">
         <!-- Grid container -->
         <div class="container pt-4">
             <!-- Section: Social media -->
-            <section class="mb-4">
+            <section class="mb-1">
                 <!-- Facebook -->
                 <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
                     data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
@@ -80,9 +81,9 @@
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            <a class="text-light" href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </div>
         <!-- Copyright -->
     </footer>
