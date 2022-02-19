@@ -38,7 +38,7 @@ window.addEventListener("load", function () {
  */
 function createList() {
     //Topicを入れる
-    url = "topic.json"
+    url = "../topic.json"
     $.getJSON(url, (data) => {                                  //jsonを取得する。サーバーを経由していないと実行されない。CRF？が原因。
         for (var i = 0; i < data.length; i++) {
             var li = document.createElement('li');              //<li>タグを生成する
