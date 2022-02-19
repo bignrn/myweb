@@ -141,6 +141,9 @@ function DrawMain() {
 	//文字
 	DrawTextMesg();
 
+	//ボタン
+	createButton();
+
 	//赤線
 	g.fillStyle = "#f00";
 	g.fillRect(0, HEIGHT / 2 - 1, WIDTH, 2);
@@ -218,5 +221,16 @@ window.onload = function () {
 	WmSize();
 	window.addEventListener("resize", function () { WmSize() });//画面サイズ初期化、変更時に実行
 	setInterval(function () { WmTimer() }, 33);	//33ms間隔で、WmTimer()を呼び出す。（約30.3fps）
+}
 
+/**
+ * button生成
+ */
+function createButton() {
+	const btUpDiv = document.getElementById("up");
+	//button追加
+	const btUp = document.createElement("button");
+	btUp.value = "↑";
+	btUp.id = "up";
+	btUpDiv.appendChild(btUp)
 }

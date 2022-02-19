@@ -8,42 +8,55 @@
     <title>Home</title>
 
     <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!--javascript-->
-    <script type="text/javascript" src="js/lie/lie.js"></script>
+    <script type="text/javascript" src="../js/lie/lie.js"></script>
 
 </head>
 
 <body>
     <header>
-        <div class="jumbotron jumbotron-fluid mx-2 mt-3">
-            <h1 class="text-center">MY HOME PAGE</h1>
-            <h1 class="text-center"></h1>
-        </div>
-        <ul class="nav nav-tabs m-4 mb-4">
+        <!--メニューリンク-->
+        <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+                <a class="nav-link" aria-current="page" href="../Home.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="icebreak_activity.html">Activity</a>
+                <a class="nav-link" href="../icebreak_activity.html">Activity</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Message</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="MyProfile.html">MyPage</a>
+                <a class="nav-link" href="../MyProfile.html">MyPage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Test</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search.html">Test</a>
             </li>
         </ul>
     </header>
     <main>
         <div class="text-center mt-5 my-5">
 
-            <h1 class=""> HOME </h1>
+            <!--ここに画像を表示したい-->
+            <img src="../img/BBAHOME.png" width="400" height="200">
+
+
+            <h1>検索サイト ば～チャン</h1>
+
+            <!--エロWordを検索したらババが表示される ver.1-->
+
+            <input type="search" name="search" id="search" placeholder="キーワードを入力">
+            <input type="submit" name="submit" value="検索" onclick="submit()" />
+            <div id="error" class="text-danger"></div>
 
         </div>
     </main>

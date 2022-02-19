@@ -87,7 +87,7 @@ function shake() {
     var Index = Math.floor(Math.random() * imgs.length);
 
     var saimage = imgs[Index] + ".png"; //imageURLを生成
-    $id("diceID").innerHTML = "<img src= '" + fileDirectry + saimage + "' alt='" + saimage + "'>"
+    $id("diceID").innerHTML = "<img src= '../" + fileDirectry + saimage + "' alt='" + saimage + "'>"
     //Topicを入れる
     url = "topic.json"
     $.getJSON(url, (data) => {
