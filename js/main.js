@@ -68,7 +68,8 @@ function saikoro() {
  * サイコロを振るときのアニメーション
  */
 function anime() {
-    if (count > 300 || flg == true) {
+    var maxCount = 300;
+    if (count > maxCount || flg == true) {
         count = 0;
         //ボタンテキスト変更
         $id("btn-dice").textContent = "サイコロを投げる"
@@ -82,26 +83,32 @@ function anime() {
 /**
  * サイコロを振る
  */
+var oldIndex = 0;   //古いサイコロの記憶
 function shake() {
     //サイコロの絵柄 --err:同じ絵柄の時表示されない
     var Index = Math.floor(Math.random() * imgs.length);
 
-    var saimage = imgs[Index] + ".png"; //imageURLを生成
-    $id("diceID").innerHTML = "<img src= '../" + fileDirectry + saimage + "' alt='" + saimage + "'>"
-    //Topicを入れる
-    url = "topic.json"
-    $.getJSON(url, (data) => {
-        //random
-        var rand = Math.floor(Math.random() * data.length)
+    if (oldIndex != Index) {
+        var saimage = imgs[Index] + ".png"; //imageURLを生成
+        $id("diceID").innerHTML = "<img src= '../" + fileDirectry + saimage + "' alt='" + saimage + "'>"
+        //Topicを入れる
+        url = "topic.json"
+        $.getJSON(url, (data) => {
+            //random
+            var rand = Math.floor(Math.random() * data.length)
 
-        //変数格納
-        var id = data[rand].id
-        var title = data[rand].title
+            //変数格納
+            var id = data[rand].id
+            var title = data[rand].title
 
-        //ランダム値からTopic表示
-        $id("p1").textContent = "Topic:" + id + " " + title
+            //ランダム値からTopic表示
+            $id("p1").textContent = "Topic:" + id + " " + title
 
-        //統計データの収集
+            //統計データの収集
 
-    });
+        });
+        oldIndex = Index;   //前のサイコロと被らないようにする。
+    } else {
+        shake();    //回帰
+    }
 }
