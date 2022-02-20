@@ -15,6 +15,7 @@ var imgs = ["icon_140540_256", "icon_140550_256", "icon_140570_256", "icon_14058
     "icon_140600_256", "icon_140610_256", "icon_140620_256", "icon_140630_256", "icon_140640_256"];
 var fileDirectry = "./img/dices/";  //ディレクトリのURL
 var count;  //サイコロの空振り回数
+const url = "../json/topic.json";
 
 /**
  * IDを取得するfnction付き変数
@@ -38,7 +39,6 @@ window.addEventListener("load", function () {
  */
 function createList() {
     //Topicを入れる
-    url = "../topic.json"
     $.getJSON(url, (data) => {                                  //jsonを取得する。サーバーを経由していないと実行されない。CRF？が原因。
         for (var i = 0; i < data.length; i++) {
             var li = document.createElement('li');              //<li>タグを生成する
@@ -92,7 +92,7 @@ function shake() {
         var saimage = imgs[Index] + ".png"; //imageURLを生成
         $id("diceID").innerHTML = "<img src= '../" + fileDirectry + saimage + "' alt='" + saimage + "'>"
         //Topicを入れる
-        url = "topic.json"
+
         $.getJSON(url, (data) => {
             //random
             var rand = Math.floor(Math.random() * data.length)
